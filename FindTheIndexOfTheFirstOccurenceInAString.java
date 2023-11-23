@@ -2,7 +2,7 @@ package Dsa.leetcode;
 
 class FindTheIndexOfTheFirstOccurenceInAString {
     public int strStr(String haystack, String needle) {
-        return
+        return null;
     }
 
     public static void main(String[] args) {
