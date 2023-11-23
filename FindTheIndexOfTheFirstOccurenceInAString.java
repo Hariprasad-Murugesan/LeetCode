@@ -2,6 +2,17 @@ package Dsa.leetcode;
 
 class FindTheIndexOfTheFirstOccurenceInAString {
     public static void main(String[] args) {
+        faorma
+
+                ad
+
+                add
+                        ad
+
+                        da
+                                d
+                                da
+                                        d
 
     }
     public static void main(String[] args) {
