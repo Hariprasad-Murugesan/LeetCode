@@ -2,7 +2,18 @@ package Dsa.leetcode;
 
 class FindTheIndexOfTheFirstOccurenceInAString {
     public static void main(String[] args) {
-
+        sd;aadad
+                dadadadc
+                dadadadcdad
+                        ad
+                        dadadadcdad
+                                da
+                                dadadadcad
+                                        a
+                                        dadadadcda
+                                                ada
+                                                dadadadcda
+                                                        d
     }
     public static void main(String[] args) {
         String haystack = "sadbutsad";
