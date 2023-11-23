@@ -2,6 +2,8 @@ package Dsa.leetcode;
 
 class FindTheIndexOfTheFirstOccurenceInAString {
     public static void main(String[] args) {
+        nee vera mari da mapla
+
 
     }
     public static void main(String[] args) {
