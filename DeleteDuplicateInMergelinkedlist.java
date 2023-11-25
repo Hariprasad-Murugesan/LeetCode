@@ -3,10 +3,10 @@ package Dsa.leetcode;
 import java.util.*;
 
 public class DeleteDuplicateInMergelinkedlist {
-    public ListNode deleteDuplicates(ListNode head) {
+    public LinkedListCycle deleteDuplicates(LinkedListCycle head) {
         Set<Integer> set = new HashSet<Integer>();
-        ListNode current = head;
-        ListNode previous = null;
+        LinkedListCycle current = head;
+        LinkedListCycle previous = null;
 
         while (current != null){
             if (set.contains(current.val)){
@@ -23,10 +23,10 @@ public class DeleteDuplicateInMergelinkedlist {
 
 class ListNode {
     int val;
-    ListNode next;
+    LinkedListCycle next;
     ListNode() {}
     ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+    ListNode(int val, LinkedListCycle next) { this.val = val; this.next = next; }
 }
 
 class Main {
@@ -34,16 +34,16 @@ class Main {
         DeleteDuplicateInMergelinkedlist sol = new DeleteDuplicateInMergelinkedlist();
 
         // Create a linked list: 1 -> 2 -> 2 -> 3 -> 4 -> 4 -> 5
-        ListNode head = new ListNode(1);
-        head.next = new ListNode(2);
-        head.next.next = new ListNode(2);
-        head.next.next.next = new ListNode(3);
-        head.next.next.next.next = new ListNode(4);
-        head.next.next.next.next.next = new ListNode(4);
-        head.next.next.next.next.next.next = new ListNode(5);
+        LinkedListCycle head = new LinkedListCycle(1);
+        head.next = new LinkedListCycle(2);
+        head.next.next = new LinkedListCycle(2);
+        head.next.next.next = new LinkedListCycle(3);
+        head.next.next.next.next = new LinkedListCycle(4);
+        head.next.next.next.next.next = new LinkedListCycle(4);
+        head.next.next.next.next.next.next = new LinkedListCycle(5);
 
         // Delete duplicates and print the resulting linked list
-        ListNode result = sol.deleteDuplicates(head);
+        LinkedListCycle result = sol.deleteDuplicates(head);
         while (result != null) {
             System.out.print(result.val + " ");
             result = result.next;

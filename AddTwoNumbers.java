@@ -21,11 +21,11 @@ class AddTwoNumbers {
         }
     }
 
-        public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        public LinkedListCycle addTwoNumbers(LinkedListCycle l1, LinkedListCycle l2) {
             //creating dummy array list
-            ListNode dummy = new ListNode(0);
+            LinkedListCycle dummy = new LinkedListCycle(0);
             //intialze an pointer
-            ListNode curr =  dummy;
+            LinkedListCycle curr =  dummy;
             //intialize a carry
             int carry = 0 ;
             //execute a while loop until l1 or l2 not reach null if add it will add on carry
@@ -41,7 +41,7 @@ class AddTwoNumbers {
                 }
                 sum += carry;
                 carry = sum/10;
-                ListNode node = new ListNode(sum % 10);
+                LinkedListCycle node = new LinkedListCycle(sum % 10);
                 curr.next= node;
                 curr = curr.next;
 
@@ -54,29 +54,29 @@ class AddTwoNumbers {
         AddTwoNumbers adder = new AddTwoNumbers();
 
         // Test Case 1:
-        ListNode l1 = new ListNode(2, new ListNode(4, new ListNode(3)));
-        ListNode l2 = new ListNode(5, new ListNode(6, new ListNode(4)));
-        ListNode result1 = adder.addTwoNumbers(l1, l2);
+        LinkedListCycle l1 = new LinkedListCycle(2, new LinkedListCycle(4, new LinkedListCycle(3)));
+        LinkedListCycle l2 = new LinkedListCycle(5, new LinkedListCycle(6, new LinkedListCycle(4)));
+        LinkedListCycle result1 = adder.addTwoNumbers(l1, l2);
         // Expected output: [7, 0, 8]
         printLinkedList(result1);
 
         // Test Case 2:
-        ListNode l3 = new ListNode(0);
-        ListNode l4 = new ListNode(0);
-        ListNode result2 = adder.addTwoNumbers(l3, l4);
+        LinkedListCycle l3 = new LinkedListCycle(0);
+        LinkedListCycle l4 = new LinkedListCycle(0);
+        LinkedListCycle result2 = adder.addTwoNumbers(l3, l4);
         // Expected output: [0]
         printLinkedList(result2);
 
         // Test Case 3:
-        ListNode l5 = new ListNode(9, new ListNode(9, new ListNode(9)));
-        ListNode l6 = new ListNode(1);
-        ListNode result3 = adder.addTwoNumbers(l5, l6);
+        LinkedListCycle l5 = new LinkedListCycle(9, new LinkedListCycle(9, new LinkedListCycle(9)));
+        LinkedListCycle l6 = new LinkedListCycle(1);
+        LinkedListCycle result3 = adder.addTwoNumbers(l5, l6);
         // Expected output: [0, 0, 0, 1]
         printLinkedList(result3);
     }
 
     // Helper method to print a linked list
-    private static void printLinkedList(ListNode head) {
+    private static void printLinkedList(LinkedListCycle head) {
         while (head != null) {
             System.out.print(head.val + " ");
             head = head.next;
