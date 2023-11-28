@@ -3,7 +3,7 @@ package Dsa.leetcode;
 import java.util.LinkedList;
 import java.util.List;
 
-class Solution {
+class BinaryTreePaths {
 
       public static class TreeNode {
       int val;
@@ -50,7 +50,7 @@ class Solution {
         root.left.right = new TreeNode(5);
 
         // Creating an instance of the Solution class
-        Solution solution = new Solution();
+        BinaryTreePaths solution = new BinaryTreePaths();
 
         // Calling the binaryTreePaths method
         List<String> paths = solution.binaryTreePaths(root);
